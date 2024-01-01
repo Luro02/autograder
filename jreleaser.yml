@@ -1,0 +1,31 @@
+project:
+  name: autograder
+  description: Automatic grading of student's Java code
+  longDescription: Automatic grading of student's Java code
+  authors:
+    - Florian Seligmann
+  license: MIT
+  inceptionYear: 2021
+  stereotype: cli
+  links:
+    homepage: https://github.com/Feuermagier/autograder
+  java:
+    groupId: de.firemage.autograder
+    version: 17
+    # artifactId: helloworld
+    # mainClass: org.jreleaser.examples.HelloWorld
+
+release:
+  github:
+    overwrite: true
+    changelog:
+      formatted: ALWAYS
+      preset: conventional-commits
+      contributors:
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
+
+distributions:
+  helloworld:
+    type: SINGLE_JAR
+    artifacts:
+      - path: autograder-cmd/target/autograder-cmd.jar
