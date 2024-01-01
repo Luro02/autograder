@@ -17,7 +17,7 @@ release:
   github:
     overwrite: true
     signatures: false
-    releaseName: {{tagName}}
+    releaseName: '{{tagName}}'
     changelog:
       formatted: ALWAYS
       skipMergeCommits: true
