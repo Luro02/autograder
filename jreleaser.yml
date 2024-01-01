@@ -12,15 +12,17 @@ project:
   java:
     groupId: de.firemage.autograder
     version: 17
-    # artifactId: helloworld
-    # mainClass: org.jreleaser.examples.HelloWorld
 
 release:
   github:
     overwrite: true
+    signatures: false
+    releaseName: {{tagName}}
     changelog:
       formatted: ALWAYS
+      skipMergeCommits: true
       preset: conventional-commits
+      format: '- {{commitShortHash}} {{commitTitle}}'
       contributors:
         format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
 
