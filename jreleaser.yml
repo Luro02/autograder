@@ -23,8 +23,10 @@ release:
       skipMergeCommits: true
       preset: conventional-commits
       format: '- {{commitShortHash}} {{commitTitle}}'
-      contributors:
-        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
+      hide:
+        contributors:
+          - '[bot]'
+          - 'GitHub'
 
 distributions:
   helloworld:
